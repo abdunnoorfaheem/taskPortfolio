@@ -1,13 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+  </style>
   <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+
+    <header>
+
+      <!-- navbar start -->
+
+    <section class="container mx-auto">
+      <nav class="flex items-center justify-between">
+        <div class="border-r-1 border-gray-700 w-[300px]">
+          <div class="py-4">
+            <h3 class="text-[32px] font-bold">
+              Daryl <span class="text-[#F89222]">Smith</span>
+            </h3>
+            <p class="text-[18px]">UI/UX designer</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-house-user bg-[#F89222] p-2 rounded-md"></i>
+          <h3 class="text-[24px]">Home</h3>
+        </div>
+        <div>
+          <button class="border-2 border-[#F5BD4D] px-4 py-2 rounded-4xl">
+            Talk To Me
+          </button>
+        </div>
+      </nav>
+    </section>
+    <!-- navbar end -->
+
+    
+    <!-- hero section start -->
+
+    <section class="bg-[#171B1A]">
+      <div class="w-[100%] flex items-center">
+        <div class="w-[5%] flex flex-col gap-8 px-8 text-[24px]">
+          <i class="fa-solid fa-house-user text-[#F89222]"></i>
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-briefcase"></i>
+          <i class="fa-solid fa-pen-to-square"></i>
+          <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="w-[30%]">
+          <div class="w-[368px] h-[505px] bg-black mt-1">
+            <img src="img/hero.png" alt="hero/banner" />
+          </div>
+          <div class="flex gap-4 pl-16 bg-black w-[368px] h-[60px] pt-2">
+            <i
+              class="fa-brands fa-facebook p-1 rounded-2xl h-[32px] w-[32px]"
+            ></i>
+            <i
+              class="fa-brands fa-linkedin p-1 rounded-2xl h-[32px] w-[32px]"
+            ></i>
+            <i
+              class="fa-brands fa-pinterest p-1 rounded-2xl h-[32px] w-[32px]"
+            ></i>
+            <i
+              class="fa-brands fa-instagram p-1 rounded-2xl h-[32px] w-[32px]"
+            ></i>
+            <i
+              class="fa-brands fa-twitter p-1 rounded-2xl h-[32px] w-[32px]"
+            ></i>
+          </div>
+        </div>
+        <div class="w-[60%]">
+          <p class="text-[#F89222]">INTRODUCTION</p>
+          <h1 class="text-[48px] font-bold">
+            I'm a Creative Developer & <br />
+            UI/UX Design Expert
+          </h1>
+          <p class="font-bold py-4">24 years / Robert Smith / UK London</p>
+          <p class="text-[#C6C6C6] py-6">
+            Prolific, full stack web developer with a passion for metrics and
+            beating former <br />
+            "best-yets. Prototyped 25 new product features per year for Flexor,
+            Inc. <br />
+            Decreased rework by 22% and costs by 15%. Consistently receive high
+            <br />
+            user experience scores for all web development projects, including a
+            <br />
+            55% increase for Flexor, Inc. Passionate about building world class
+            web <br />
+            applications. One of my sites received a 2020 Webby for Best <br />
+            Navigation and Structure.
+          </p>
+          <div>
+            <button
+              class="bg-[linear-gradient(to_right,#F5BD4D,#F89222)] px-5 py-2 rounded-3xl"
+            >
+              Downdolad CV <i class="fa-solid fa-download"></i>
+            </button>
+          </div>
+        </div>
+        <div class="w-[5%]">
+          <div class="">
+            <div class="">
+              <div
+                class="flex gap-1 justify-center text-gray-400 text-[14px] rotate-90"
+              >
+                <p>&copy;</p>
+                <p>design</p>
+                <p>by</p>
+                <p>themefisher</p>
+                <p>developed</p>
+                <p>by</p>
+                <p>gethugothemes</p>
+                <div class="flex gap-2 pl-3 text-white">
+                  <p
+                    class="h-[32px] w-[32px] bg-[#343434] pl-2 pt-1 rounded-3xl"
+                  >
+                    Fr
+                  </p>
+                  <p
+                    class="h-[32px] w-[32px] bg-[#F5BD4D] pl-2 pt-1 rounded-3xl"
+                  >
+                    En
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hero section end  -->
+
+    </header>
+    <main></main>
+    <footer></footer>
+    
+
   </body>
 </html>

@@ -1,20 +1,31 @@
 const { src, dest, watch, series } = require('gulp');
 const htmlmin = require('gulp-htmlmin');
+const browserSync = require('browser-sync').create();
 
 // Task to process HTML from the root folder
 function processHTML() {
-    return src('index.html')  // Instead of 'src/*.html', we use 'index.html'
-        .pipe(htmlmin({ collapseWhitespace: true })) // Minify HTML
-        .pipe(dest('dist')); // Save to 'dist' folder
+    return src('index.html')  
+        .pipe(htmlmin({ collapseWhitespace: true })) 
+        .pipe(dest('dist'))  
+        .pipe(browserSync.stream()); // Reload browser
 }
 
-// Task to watch index.html for changes
+// Initialize Browsersync server
+function serve(cb) {
+    browserSync.init({
+        server: {
+            baseDir: "./",  // Serve from project root
+        },
+        port: 3000
+    });
+    cb();
+}
+
+// Watch for file changes
 function watchFiles() {
     watch('index.html', processHTML);
+    watch('index.html').on('change', browserSync.reload);
 }
 
-// Default task (runs processHTML)
-exports.default = series(processHTML);
-
-// Watch task
-exports.watch = watchFiles;
+// Default task (starts server & watch)
+exports.default = series(processHTML, serve, watchFiles);
